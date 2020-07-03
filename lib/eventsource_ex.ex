@@ -13,7 +13,7 @@ defmodule EventsourceEx do
 
   defp parse_options(opts) do
     url = opts[:url]
-    headers = opts[:headers]
+    headers = opts[:headers] || []
     parent = opts[:stream_to]
     follow_redirect = opts[:follow_redirect]
     hackney_opts = opts[:hackney]
